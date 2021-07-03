@@ -7,11 +7,3 @@ Launchers -> all disabled
 Navigate applications and windows/Launch and switch applications -> Alt + Space
 Typing -> all disabld
 
-
-Emoji picker shortcut
-
-Run
-  ibus-setup
-Diable shortcut for "Next input method"
-Emoji annotation -> Control Alt Space
-
