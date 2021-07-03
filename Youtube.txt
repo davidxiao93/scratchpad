@@ -1,0 +1,3 @@
+In chrome, 
+enable the Use system title bar and borders 
+And turn off the title bar
