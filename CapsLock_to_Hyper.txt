@@ -19,3 +19,5 @@ If they are, then they are acting the same way
 Run 
   xmodmap -e "remove Mod4 = Hyper_L" -e "add Mod3 = Hyper_L"
 to move Hyper_L from Mod4 to Mod3 in this example. Change as needed
+
+xmodmap changes are not persistent. Add the command to the startup scripts to make it persistent
