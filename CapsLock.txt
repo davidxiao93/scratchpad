@@ -1,0 +1,21 @@
+Change CapsLock to behave as a Hyper key
+Unlocks a new modifier to use for shortcuts
+
+Gnome Tweak Tools 
+- Keyboard & Mouse
+- Additional Layout Options
+- Caps Lock behaviour
+- Make Caps Lock an additional Hyper
+
+This will convert Caps Lock into a Hyper
+
+If Hyper is being treated as Super then they are likely sharing the same mod level
+
+Run 
+  xmodmap
+and check if Hyper_L is on the same line as Super_L
+If they are, then they are acting the same way
+
+Run 
+  xmodmap -e "remove Mod4 = Hyper_L" -e "add Mod3 = Hyper_L"
+to move Hyper_L from Mod4 to Mod3 in this example. Change as needed
