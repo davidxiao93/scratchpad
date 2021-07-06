@@ -1,0 +1,126 @@
+Instructions to get my preferred desktop environment setup
+
+- Install Pop OS 21.04 with default settings
+- Go through settings
+  - Connect to Wifi
+  - Turn off Bluetooth
+  - Desktop settings
+    - General settings
+      - Super key action -> Workspaces
+      - Disable hot corner
+      - Remove Applications button from top bar
+      - Hide minimise and maximise buttons
+    - Background settings
+      - TODO
+    - Appearance settings
+      - Dark
+    - Dock settings
+      - Disable
+      - Turn off all dock options
+      - Dock Visibility -> Always hide
+    - Workspace settings
+      - Dynamic workspaces
+      - Workspaces on Primary Display Only (TODO Other option needs investigating)
+      - Picker along left side
+  - Privacy settings
+    - File History & Wastebasket
+      - Turn off File History
+  - Sharing settings
+    - Rename computer as desired
+  - Power settings
+    - Dim screen when inactive -> off
+    - Blank screen after 15 minutes 
+    - Automatic Suspend
+      - 1 hour on battery
+      - 2 hours when plugged in
+    - Power Button Behaviour -> Suspend
+    - Show Battery Percentage -> On
+  - Mouse and Trackpad settings
+    - Mouse accelation -> Off
+    - Touchpad -> On
+    - Touchpad Natural Scrolling -> On
+  - Keyboard settings
+    - Input Sources -> English (UK)
+    - Custom Keyboard Shortcuts
+      - Launchers
+        - Home folder -> Disabled
+        - Launch email client -> Disabled
+        - Launch help browser -> Disabled
+        - Launch terminal -> disabled
+        - Launch web browser -> disabled
+      - Navigate applications and windows
+        - Launch and switch applications -> Alt + Space
+      - Typing
+        - Switch to next input source -> Disabled
+        - Switch to previous input source -> Disabled
+      - Windows
+        - Activate the window menu -> Disabled
+        - View split on left -> Disabled
+        - View split on right -> Disabled
+  - Date and Time settings
+    - Time format -> 24 Hour
+  - OS Upgrade and Recovery
+    - Check for updates
+- Update gestures
+  - Copy contents of touchegg.conf into ~/.config/touchegg/touchegg.conf
+  - Or configure it manually
+    - Install "Touche" from PopShop
+    - Swipe Up 3 Fingers -> Execute dbus-send --session --dest=org.gnome.Shell --type=method_call /org/gnome/Shell org.gnome.Shell.Eval string:'let pop_cosmic = Main.extensionManager.lookup("pop-cosmic@system76.com"); if (pop_cosmic) { pop_cosmic.stateObj.gesture(pop_cosmic.stateObj.GESTURE_DOWN); }'
+    - Swipe Down 3 Fingers -> Execute dbus-send --session --dest=org.gnome.Shell --type=method_call /org/gnome/Shell org.gnome.Shell.Eval string:'let pop_cosmic = Main.extensionManager.lookup("pop-cosmic@system76.com"); if (pop_cosmic) { pop_cosmic.stateObj.gesture(pop_cosmic.stateObj.GESTURE_UP); }'
+    - Swipe Up 4 Fingers -> Send Keys Super_L+Shift_L + Down
+    - Swipe Down 4 Fingers -> Send Keys Super_L+Shift_L + Up
+- Gnome Tweaks
+  - sudo apt install gnome-tweaks
+  - Fonts settings
+    - Antialiasing -> Subpixel
+  - Keyboard and Mouse settings
+    - Disable Capslock (Or make it a hyper)
+    - Middle Click Paste -> Disable
+  - Top bar settings
+    - Clock Seconds -> On
+  - Windows settings
+    - Edge Tiling -> Disable
+- Extensions
+  - Built in
+    - Desktop Icons NG -> Disable
+    - Pop Shell
+      - Show Window titles -> Disable
+      - Enable (Use top right menu)
+      - Gaps -> 0 (Use top right menu)
+  - Extra
+    - Audio Output Switcher
+    - Bluetooth quick connect 
+    - Fullscreen Notifications
+    - Hide Top Bar
+      - Sensitivity
+        - Show panel when mouse approaches edges of the screen -> Enabled
+        - In the above case, also show panel when fullscreen -> Enabled
+        - Show panel in overview -> Enabled
+      - Intellihide
+        - Only hide panel when a window takes space -> Enabled
+        - Only when the active window takes the space -> Disabled
+      NOTE: You may need to restart the tiling engine to see this in effect
+    - Impatience
+      - Set to 0.5
+    - Remove Alt+Tab Delay V2
+    - Skip Window Ready Notification
+    - Transparent Top Bar (Adjustible transparency)
+      - Ocupacy -> 0
+    - Vitals
+      - Seconds between update -> 1 second
+      - Position in panel -> Left
+      - Use higher precision -> Enabled
+      - Alphabetize sensors -> Disabled
+      - Sensors
+        - Only processor and memory
+        - Organise them in the top bar
+    
+  
+  
+  
+  
+  
+      
+      
+      
+      
