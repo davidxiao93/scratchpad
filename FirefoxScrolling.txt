@@ -1,0 +1,8 @@
+Firefox can do kinetic scrolling in Wayland by default
+Firefox can also do it in X, but is not always enabled.
+
+- Enable config in Firefox settings
+- Run
+  echo export MOZ_USE_XINPUT2=1 MOZ_ENABLE_WAYLAND=1 | sudo tee /etc/profile.d/use-xinput2.sh
+  sudo chmod a+x /etc/profile.d/use-xinput2.sh
+- Reboot
