@@ -87,6 +87,10 @@ Instructions to get my preferred desktop environment setup
       - Show Window titles -> Disable
       - Enable (Use top right menu)
       - Gaps -> 0 (Use top right menu)
+    - Cosmic Dock -> Disable
+      - Add command to startup scripts to fix the dash being shown on workspaces
+          dbus-send --session --dest=org.gnome.Shell --type=method_call /org/gnome/Shell org.gnome.Shell.Eval string:'const Main = imports.ui.main; const Config = imports.misc.config; const ShellVersion = parseFloat(Config.PACKAGE_VERSION); if (ShellVersion >= 3.36 && Main.overview && Main.overview.dash) {Main.overview.dash.hide(); if (ShellVersion < 40) {Main.overview.dash.height = 0;} else {Main.overview.dash.width = 0;}}'
+         
   - Extra
     - Audio Output Switcher
     - Bluetooth quick connect 
