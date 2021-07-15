@@ -132,8 +132,39 @@ SwapSpace
 - sudo mkswap /swapfile
 - sudo swapon /swapfile
 - echo '/swapfile none swap defaults 0 0' | sudo tee -a /etc/fstab
+Default Applications (Optional)
+- Remove LibreOffice applications
+- Remove Character Map
+- Remove Document Scanner
+- Remove Geary
 Terminal
-- Install ZSH + OhMyZsh + Powerlevel10k
+- sudo apt install zsh
+- chsh -s $(which zsh)
+- sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+- install fonts https://github.com/romkatv/powerlevel10k#manual-font-installation
+- apply fonts (profile prefernces in gnome-terminal)
+- git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+- Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
+- restart
+- follow the instructions in the terminal
+  - Lean
+  - Unicode
+  - 256 colours
+  - 24 Hour time
+  - Two lines
+  - Dotted
+  - No Frame
+  - Light
+  - Sparse
+  - Few Icons
+  - Concise
+  - Yes to transient Prompt
+  - Quiet instant prompt mode
+  - Apply
+Wallpaper
+- Install Dynamic Wallpaper Editor
+- Create xml file
+- Use gnome-tweaks to apply xml wallpaper
 Firefox
 - Environment Variables
   - echo export MOZ_USE_XINPUT2=1 | sudo tee /etc/profile.d/use-xinput2.sh
@@ -173,7 +204,7 @@ Firefox
     - Select default playback speed
     - Disable autoplay
     - Disable miniplayer
-    - Automatically enable Theatre mode
+    - Done Automatically enable Theatre mode
     - Automatically expand video player
     - Use the available space based on the viewport dimensions to expand the video player
     - Automatically expand video descriptions
