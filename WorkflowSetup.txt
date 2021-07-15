@@ -126,14 +126,83 @@ Instructions to get my preferred desktop environment setup
       - Sensors
         - Only processor and memory
         - Organise them in the top bar
-  Fixes/Tweaks
-  - Install custom Extension to show Cosmic Launcher on empty workspace
-    - Copy files into ~/.local/share/gnome-shell/extensions/
-  - Fix Super+O behaviour 
-    - Check if Super+O is bound to multiple bindings
-      - gsettings list-recursively | grep -i "<Super>o"
-    - If it is, disable other bindings, e.g.
-      - gsettings set org.gnome.settings-daemon.plugins.media-keys rotate-video-lock-static []
+SwapSpace
+- sudo fallocate -l 2G /swapfile
+- sudo chmod 600 /swapfile
+- sudo mkswap /swapfile
+- sudo swapon /swapfile
+- echo '/swapfile none swap defaults 0 0' | sudo tee -a /etc/fstab
+Terminal
+- Install ZSH + OhMyZsh + Powerlevel10k
+Firefox
+- Environment Variables
+  - echo export MOZ_USE_XINPUT2=1 | sudo tee /etc/profile.d/use-xinput2.sh
+- about:config
+  - apz.overscroll.enable -> true
+  - mousewheel.default.delta_multiplier_y -> 50 (repeat for x and z)
+- toolbar
+  - back
+  - forward
+  - refresh
+  - url bar
+  - ublock origin
+  - menu
+- Settings
+  - General
+    - Disable Picture-In-Picture mode
+    - Smooth Scrolling enabled
+    - Don't recommend extensions
+    - Don't recommend features
+  - Home
+    - Disable Sponsored shortcuts
+  - Search
+    - Change to DuckDuckGo
+    - Remove other search shortcuts
+  - Privacy and security
+    - Scrict mode
+    - Always send DoNotTrack
+    - Disable built in password manager
+    - Addressbar should not suggest shortcuts or other tabs or search engines
+    - Disallow Firefox data collection
+- Extensions
+  - uBlockOrigin
+  - EnhancerForYoutube
+    - Youtube official Dark Theme
+    - Remove all controls
+    - Select default playback quality
+    - Select default playback speed
+    - Disable autoplay
+    - Disable miniplayer
+    - Automatically enable Theatre mode
+    - Automatically expand video player
+    - Use the available space based on the viewport dimensions to expand the video player
+    - Automatically expand video descriptions
+    - Hide comments
+    - Hide chat
+  - SponsorBlock
+    - Autoskip Sponsor
+    - Autoskip Self Promotions
+    - Autoskip Interaction Reminders
+    - Autoskip Intros
+    - Autoskip Endcards
+    - Disable Preview/Recap
+    - Disable Music
+    - Don't show buttons on Youtube player
+  - GnomeShellIntegration
+  - HttpsEverywhere
+  - IDon'tCareAboutCookies
+
+
+        
+        
+Fixes/Tweaks
+- Install custom Extension to show Cosmic Launcher on empty workspace
+  - Copy files into ~/.local/share/gnome-shell/extensions/
+- Fix Super+O behaviour 
+  - Check if Super+O is bound to multiple bindings
+    - gsettings list-recursively | grep -i "<Super>o"
+  - If it is, disable other bindings, e.g.
+    - gsettings set org.gnome.settings-daemon.plugins.media-keys rotate-video-lock-static []
   
   
   
