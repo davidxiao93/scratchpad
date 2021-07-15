@@ -35,6 +35,9 @@ Instructions to get my preferred desktop environment setup
       - 2 hours when plugged in
     - Power Button Behaviour -> Suspend
     - Show Battery Percentage -> On
+  - Display settings
+    - Disable HiDPI Daemon
+    - Disable LoDPI displays at HiDPI resolutions
   - Mouse and Trackpad settings
     - Mouse accelation -> Off
     - Touchpad -> On
@@ -57,6 +60,10 @@ Instructions to get my preferred desktop environment setup
         - Activate the window menu -> Disabled
         - View split on left -> Disabled
         - View split on right -> Disabled
+      - Custom
+        - gnome-system-monitor -> Control + Shift + Esc
+  - Removable Media
+    - Never prompt or start programs on media insertion -> enabled
   - Date and Time settings
     - Time format -> 24 Hour
   - OS Upgrade and Recovery
@@ -87,6 +94,7 @@ Instructions to get my preferred desktop environment setup
       - Show Window titles -> Disable
       - Enable (Use top right menu)
       - Gaps -> 0 (Use top right menu)
+      - Active Hint colour: #00B9C1
     - Cosmic Dock -> Disable
       - Add command to startup scripts to fix the dash being shown on workspaces
           dbus-send --session --dest=org.gnome.Shell --type=method_call /org/gnome/Shell org.gnome.Shell.Eval string:'const Main = imports.ui.main; const Config = imports.misc.config; const ShellVersion = parseFloat(Config.PACKAGE_VERSION); if (ShellVersion >= 3.36 && Main.overview && Main.overview.dash) {Main.overview.dash.hide(); if (ShellVersion < 40) {Main.overview.dash.height = 0;} else {Main.overview.dash.width = 0;}}'
@@ -118,7 +126,14 @@ Instructions to get my preferred desktop environment setup
       - Sensors
         - Only processor and memory
         - Organise them in the top bar
-    
+  Fixes/Tweaks
+  - Install custom Extension to show Cosmic Launcher on empty workspace
+    - Copy files into ~/.local/share/gnome-shell/extensions/
+  - Fix Super+O behaviour 
+    - Check if Super+O is bound to multiple bindings
+      - gsettings list-recursively | grep -i "<Super>o"
+    - If it is, disable other bindings, e.g.
+      - gsettings set org.gnome.settings-daemon.plugins.media-keys rotate-video-lock-static []
   
   
   
