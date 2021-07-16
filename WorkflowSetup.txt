@@ -236,7 +236,9 @@ Fixes/Tweaks
     - gsettings set org.gnome.settings-daemon.plugins.media-keys rotate-video-lock-static []
   
   
-  
+Install/Setup
+- Dual boot windows + PopOS: https://github.com/spxak1/weywot/blob/main/Pop_OS_Dual_Boot.md
+- Custom encrypted install: https://www.reddit.com/r/pop_os/comments/euix9u/pop_os_1910_encrypted_custom_install_video_text/
   
   
       
