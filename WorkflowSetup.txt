@@ -1,6 +1,6 @@
 Instructions to get my preferred desktop environment setup
 
-- Install Pop OS 21.04 with default settings
+- Install Pop OS 22.04 with default settings
 - Go through settings
   - Connect to Wifi
   - Turn off Bluetooth
@@ -62,6 +62,7 @@ Instructions to get my preferred desktop environment setup
         - View split on right -> Disabled
       - Custom
         - gnome-system-monitor -> Control + Shift + Esc
+        - rofi -combi-modi window,drun -show combi -show-icons -theme Pop-Dark -sort -sorting-method fzf -> Alt + Space
   - Removable Media
     - Never prompt or start programs on media insertion -> enabled
   - Date and Time settings
@@ -72,10 +73,6 @@ Instructions to get my preferred desktop environment setup
   - Copy contents of touchegg.conf into ~/.config/touchegg/touchegg.conf
   - Or configure it manually
     - Install "Touche" from PopShop
-    - Swipe Up 3 Fingers -> Execute dbus-send --session --dest=org.gnome.Shell --type=method_call /org/gnome/Shell org.gnome.Shell.Eval string:'let pop_cosmic = Main.extensionManager.lookup("pop-cosmic@system76.com"); if (pop_cosmic) { pop_cosmic.stateObj.gesture(pop_cosmic.stateObj.GESTURE_DOWN); }'
-    - Swipe Down 3 Fingers -> Execute dbus-send --session --dest=org.gnome.Shell --type=method_call /org/gnome/Shell org.gnome.Shell.Eval string:'let pop_cosmic = Main.extensionManager.lookup("pop-cosmic@system76.com"); if (pop_cosmic) { pop_cosmic.stateObj.gesture(pop_cosmic.stateObj.GESTURE_UP); }'
-    - Swipe Up 4 Fingers -> Send Keys Super_L+Shift_L + Down
-    - Swipe Down 4 Fingers -> Send Keys Super_L+Shift_L + Up
 - Gnome Tweaks
   - sudo apt install gnome-tweaks
   - Fonts settings
@@ -95,9 +92,9 @@ Instructions to get my preferred desktop environment setup
       - Enable (Use top right menu)
       - Gaps -> 0 (Use top right menu)
       - Active Hint colour: #00B9C1
-    - Cosmic Dock -> Disable
-      - Add command to startup scripts to fix the dash being shown on workspaces
-          dbus-send --session --dest=org.gnome.Shell --type=method_call /org/gnome/Shell org.gnome.Shell.Eval string:'const Main = imports.ui.main; const Config = imports.misc.config; const ShellVersion = parseFloat(Config.PACKAGE_VERSION); if (ShellVersion >= 3.36 && Main.overview && Main.overview.dash) {Main.overview.dash.hide(); if (ShellVersion < 40) {Main.overview.dash.height = 0;} else {Main.overview.dash.width = 0;}}'
+    - Cosmic X11 Gestures -> Disable
+      - Use touchegg config instead
+      
          
   - Extra
     - Audio Output Switcher
@@ -126,6 +123,21 @@ Instructions to get my preferred desktop environment setup
       - Sensors
         - Only processor and memory
         - Organise them in the top bar
+PowerSavings
+- Install powertop
+  - sudo apt install powertop
+- Install tlp
+  - sudo apt install tlp tlp-rdw
+Thermal constraints (Intel only)
+- Set thermal limit
+  - Identify the coling device under /sys/devices/virtual/thermal 
+    - For LG GRAM 17 2022 15-1240p it is cooling_device17
+    - You'll know it is the correct one by checking the value in the type file. It will be "TCC Offset"
+      - cat /sys/devices/virtual/thermal/cooling_device17/type
+    - As root set the new TCC Offset
+      - echo 50 > /sys/devices/virtual/thermal/cooling_device17/cur_state
+      - value is amount below 100*C that the CPU will throttle to. In the above example, it will limit CPU temps to 50*C
+
 SwapSpace
 - sudo fallocate -l 2G /swapfile
 - sudo chmod 600 /swapfile
