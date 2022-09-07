@@ -183,6 +183,7 @@ Firefox
 - about:config
   - apz.overscroll.enable -> true
   - mousewheel.default.delta_multiplier_y -> 50 (repeat for x and z)
+  - mousewheel.min_line_scroll_amount -> 100
 - toolbar
   - back
   - forward
