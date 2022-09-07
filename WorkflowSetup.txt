@@ -106,7 +106,7 @@ Instructions to get my preferred desktop environment setup
         - In the above case, also show panel when fullscreen -> Enabled
         - Show panel in overview -> Enabled
       - Intellihide
-        - Only hide panel when a window takes space -> Enabled
+        - Only hide panel when a window takes space -> Disabled
         - Only when the active window takes the space -> Disabled
       NOTE: You may need to restart the tiling engine to see this in effect
     - Impatience
