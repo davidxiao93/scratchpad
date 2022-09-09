@@ -236,6 +236,10 @@ Firefox
   - HttpsEverywhere
   - IDon'tCareAboutCookies
 
+Visual Studio Code
+- Enable Autosave
+- Enable Smooth Scrolling
+- Disable Editor Preview
 
         
         
