@@ -62,7 +62,6 @@ Instructions to get my preferred desktop environment setup
         - View split on right -> Disabled
       - Custom
         - gnome-system-monitor -> Control + Shift + Esc
-        - rofi -combi-modi window,drun -show combi -show-icons -theme Pop-Dark -sort -sorting-method fzf -> Alt + Space
   - Removable Media
     - Never prompt or start programs on media insertion -> enabled
   - Date and Time settings
@@ -241,10 +240,17 @@ Visual Studio Code
 - Enable Smooth Scrolling
 - Disable Editor Preview
 
-        
+ULauncher
+- Hotkey -> Alt + Space
+- Theme -> Pop!_OS (See folder)
+- Launch at Login -> Enabled
+- Clear Input on Hide -> Enabled
+- Don't hide after losing mouse focus -> Disabled
+- Remove all shortcuts
+- Remove all extensions 
         
 Fixes/Tweaks
-- Install custom Extension to show Cosmic Launcher on empty workspace
+- Install custom Extension to show ULauncher on empty workspace
   - Copy files into ~/.local/share/gnome-shell/extensions/
 - Fix Super+O behaviour 
   - Check if Super+O is bound to multiple bindings
