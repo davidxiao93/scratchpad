@@ -15,7 +15,7 @@ let _manager, _workspace, _monitor;
 let _launched = false;
 
 function maybeOpenLauncher() {
-    if (_workspace.list_windows().length === 0 && _launched === false) {
+    if (_workspace.list_windows().length === 0 && _launched === false && !Main.overview._shown) {
         try {
             // The process starts running immediately after this function is called. Any
             // error thrown here will be a result of the process failing to start, not
@@ -51,7 +51,7 @@ function maybeCloseLauncher() {
 function connectWindowSignals() {
     _workspace = _manager.get_active_workspace();
     _signal['window-removed'] = _workspace.connect('window-removed', maybeOpenLauncher);
-    _signal['window-added'] = _workspace.connect('window-added', maybeCloseLauncher);
+    _signal['window-added'] = _workspace.connect('window-added', maybeCloseLauncher); 
 }
 
 function disconnectWindowSignals() {
@@ -85,6 +85,8 @@ function enable() {
     connectWindowSignals();
 
     _signal['workspace-switched'] = _manager.connect('workspace-switched', checkWorkspace);
+    _signal['overview-showing'] = Main.overview.connect('showing', maybeCloseLauncher);
+    _signal['overview-hiding'] = Main.overview.connect('hiding', maybeOpenLauncher);
     
     // shows Cosmic Launcher at login, but waits for mainloop to turn idle first
     // .. and then waits 1 second
@@ -100,4 +102,6 @@ function enable() {
 function disable() {
     disconnectWindowSignals();
     _manager.disconnect(_signal['workspace-switched']);
+    Main.overview.disconnect(_signal['overview-showing']);
+    Main.overview.disconnect(_signal['overview-hiding']);
 }
