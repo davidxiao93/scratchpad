@@ -104,16 +104,17 @@ Instructions to get my preferred desktop environment setup
         - Show panel when mouse approaches edges of the screen -> Enabled
         - In the above case, also show panel when fullscreen -> Enabled
         - Show panel in overview -> Enabled
+      - Animation
+        - Entering/leaving -> 0.1
+        - Mouse approaching -> 0.1
       - Intellihide
-        - Only hide panel when a window takes space -> Disabled
+        - Only hide panel when a window takes space -> Enabled
         - Only when the active window takes the space -> Disabled
       NOTE: You may need to restart the tiling engine to see this in effect
     - Impatience
       - Set to 0.5
     - Remove Alt+Tab Delay V2
     - Skip Window Ready Notification
-    - Transparent Top Bar (Adjustible transparency)
-      - Ocupacy -> 0
     - Vitals
       - Seconds between update -> 1 second
       - Position in panel -> Left
@@ -122,6 +123,14 @@ Instructions to get my preferred desktop environment setup
       - Sensors
         - Only processor and memory
         - Organise them in the top bar
+    - Custom extensions
+      - Install extensions into ~/.local/share/gnome-shell/extensions/
+      - Launcher when workspace empty -> Enabled
+        - Made from scratch
+      - Transparent Panel by FawtyToo
+        - Patched to always be transparent on Overview
+
+
 PowerSavings
 - Install powertop
   - sudo apt install powertop
@@ -248,10 +257,9 @@ ULauncher
 - Don't hide after losing mouse focus -> Disabled
 - Remove all shortcuts
 - Remove all extensions 
+- Don't forget about custom gnome extension :)
         
 Fixes/Tweaks
-- Install custom Extension to show ULauncher on empty workspace
-  - Copy files into ~/.local/share/gnome-shell/extensions/
 - Fix Super+O behaviour 
   - Check if Super+O is bound to multiple bindings
     - gsettings list-recursively | grep -i "<Super>o"
