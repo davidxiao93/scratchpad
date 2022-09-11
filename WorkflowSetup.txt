@@ -74,6 +74,8 @@ Instructions to get my preferred desktop environment setup
     - Install "Touche" from PopShop
 - Gnome Tweaks
   - sudo apt install gnome-tweaks
+  - Appearance
+    - Icons -> Pop-os-branding (Makes transparent panel usable)
   - Fonts settings
     - Antialiasing -> Subpixel
   - Keyboard and Mouse settings
