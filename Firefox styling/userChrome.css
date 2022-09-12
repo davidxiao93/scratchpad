@@ -1,0 +1,9 @@
+.titlebar-spacer[type="pre-tabs"]{ 
+    /*display: none !important;
+    */
+    max-width: 2px;
+}
+.titlebar-spacer[type="post-tabs"]{ 
+    display: none !important;
+}
+

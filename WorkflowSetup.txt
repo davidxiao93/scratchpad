@@ -245,6 +245,8 @@ Firefox
   - GnomeShellIntegration
   - HttpsEverywhere
   - IDon'tCareAboutCookies
+- Styling
+  - Use the stylesheet in Firefox Styling to get rid of the stupid top left corner empty space when not maximised
 
 Visual Studio Code
 - Enable Autosave
