@@ -1,0 +1,16 @@
+#panel.transparent
+{
+    background-color: transparent;
+    transition-duration: 50ms;
+}
+
+#panel 
+{
+    text-shadow: 0px 0px 1px black;
+}
+
+.system-status-icon, .popup-menu-arrow, .app-menu-icon > StIcon
+{
+    icon-shadow: 0px 0px 1px black;
+}
+

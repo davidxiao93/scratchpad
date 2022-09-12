@@ -264,6 +264,7 @@ ULauncher
 Fixes/Tweaks
 - Add Administrator privilages to Nautilus (File manager)
   - sudo apt install nautilus-admin
+- Custom Pop icons to fix transparency issues
 - Fix Super+O behaviour 
   - Check if Super+O is bound to multiple bindings
     - gsettings list-recursively | grep -i "<Super>o"
