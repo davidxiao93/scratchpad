@@ -79,7 +79,7 @@ Instructions to get my preferred desktop environment setup
   - Fonts settings
     - Antialiasing -> Subpixel
   - Keyboard and Mouse settings
-    - Disable Capslock (Or make it a hyper)
+    - Disable Capslock (Or make it a hyper or backspace)
     - Middle Click Paste -> Disable
   - Top bar settings
     - Clock Seconds -> On
@@ -145,8 +145,11 @@ Thermal constraints (Intel only)
     - You'll know it is the correct one by checking the value in the type file. It will be "TCC Offset"
       - cat /sys/devices/virtual/thermal/cooling_device17/type
     - As root set the new TCC Offset
-      - echo 50 > /sys/devices/virtual/thermal/cooling_device17/cur_state
-      - value is amount below 100*C that the CPU will throttle to. In the above example, it will limit CPU temps to 50*C
+      - echo 40 > /sys/devices/virtual/thermal/cooling_device17/cur_state
+      - value is amount below 100*C that the CPU will throttle to. In the above example, it will limit CPU temps to 60*C
+    - Configure to run at reboot:
+      - sudo crontab -e
+      - @reboot /home/david/.temperature_control/lower_temp.sh 60
 
 SwapSpace
 - sudo fallocate -l 2G /swapfile

@@ -1,9 +1,0 @@
-Custom Keyboard shortcuts
-
-Windows/Activate the window menu -> disabled
-Windows/View spit on left -> disabled
-Windows/View split on tirhgt -> disabled
-Launchers -> all disabled
-Navigate applications and windows/Launch and switch applications -> Alt + Space
-Typing -> all disabld
-
