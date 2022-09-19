@@ -1,18 +1,40 @@
+/* Remove the stupid grab handle gap at the top left when Firefox is not maximised*/ 
 .titlebar-spacer[type="pre-tabs"]{
-    /* Remove the stupid grab handle gap at the top left when Firefox is not maximised*/ 
     max-width: 2px;
 }
+
+/* Remove any post tab gaps to the right */
 .titlebar-spacer[type="post-tabs"]{ 
-    /* Remove any post tab gaps to the right */
     display: none !important;
 }
 
+/* Fix spacing on normal tabs */
+.tab-close-button {
+    margin-right: 0 !important;
+}
+
+/* Pinned tabs spacing */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0px !important;
+}
+
+
+/* Remove the "Firefox Suggest" text when searching in the url bar */
 .urlbarView-row[label]::before {
-    /* Remove the "Firefox Suggest" text when searching in the url bar */
     display: none !important;
 }
 
+/* Remove the gap between the search suggestions and url suggestions */
 .urlbarView-row[label] {
-    /* Remove the gap between the search suggestions and url suggestions */
     margin-block-start: unset !important;
 }
+
+
+/* Hide huttons for back, forward, reload, star from context menu */
+#context-navigation,
+#context-sep-navigation {
+    display: none !important;
+}
+
