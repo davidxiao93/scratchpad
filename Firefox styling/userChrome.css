@@ -1,9 +1,18 @@
-.titlebar-spacer[type="pre-tabs"]{ 
-    /*display: none !important;
-    */
+.titlebar-spacer[type="pre-tabs"]{
+    /* Remove the stupid grab handle gap at the top left when Firefox is not maximised*/ 
     max-width: 2px;
 }
 .titlebar-spacer[type="post-tabs"]{ 
+    /* Remove any post tab gaps to the right */
     display: none !important;
 }
 
+.urlbarView-row[label]::before {
+    /* Remove the "Firefox Suggest" text when searching in the url bar */
+    display: none !important;
+}
+
+.urlbarView-row[label] {
+    /* Remove the gap between the search suggestions and url suggestions */
+    margin-block-start: unset !important;
+}
