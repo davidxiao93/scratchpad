@@ -275,7 +275,8 @@ Fixes/Tweaks
     - gsettings list-recursively | grep -i "<Super>o"
   - If it is, disable other bindings, e.g.
     - gsettings set org.gnome.settings-daemon.plugins.media-keys rotate-video-lock-static []
-  
+- Change default columns in Files
+  - gsettings set org.gnome.nautilus.list-view default-visible-columns "['name', 'type', 'size', 'date_modified']"
   
 Install/Setup
 - Dual boot windows + PopOS: https://github.com/spxak1/weywot/blob/main/Pop_OS_Dual_Boot.md
