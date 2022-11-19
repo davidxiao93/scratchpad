@@ -1,0 +1,114 @@
+Enable developer options
+- Animations 0.5
+- Usb debugging
+
+Install
+- Flauncher
+- File Commander
+- TV Bro
+- mpv
+- JellyFin
+- Amazon Prime Video
+- S0und + Custom Launcher
+- Smart Tube Next + Custom Launcher
+- Button Mapper
+
+Settings
+- Display and Sound
+    - Disable Hdmi CEC
+- Privacy 
+    - Disable everything
+    - Turn off auto updates
+- Apps
+    - Disable Ambient mode
+- System
+    - Accessibility
+        - Captions
+            - Modify as you see fit
+    - Keyboard
+        - GBoard Settings  
+            - Disable usage sharing
+- Remotes and accessories
+    - Epson TW5600
+        - Volume uses code 2/6
+        - Don't set up input or power
+
+
+Button Mapper
+- Home
+    - Single tap -> Flauncher
+    - Long press -> Screenshot
+- Button3 (Youtube)
+    - Single tap -> STN Beta (L)
+    - Long press -> S0und (L)
+- Button4 (Netflix)
+    - Single tap -> JellyFin
+    - Long press -> Amazon Prime Video
+
+
+Making Flauncher default
+- adb connect <ip>:5555
+- adb shell pm disable-user --user 0 com.google.android.apps.tv.launcherx
+- adb shell pm disable-user --user 0 com.google.android.tungsten.setupwraith
+- Disable Ambient mode
+
+Flauncher
+- Category name trick: https://invisibletext.com/
+
+STN Beta
+- Login as myself
+- Settings
+    - General
+        - Boot to section -> Subscriptions
+        - Set-up sections -> Channels, Subscriptions, Playlists
+        - Context menu 
+            - Add/Remove from playback queue
+            - Playback queue
+            - Subscribe/Unsubscribe from channel
+            - Add/Delete playlist from Playlists section
+            - Add/Remove from playlist 
+            - Remove from History
+            - Pin/Unpin from sidebar
+            - Move section up
+            - Move section down
+            - Rename this section
+        - Buttons at the top of main window -> none
+        - Misc
+            - Hide shorts from Home
+            - Hide shorts from Subscriptions
+            - Hide shorts from History
+            - Hide upcoming from Subscriptions
+    - Video player
+        - Remember speed -> Same on all videos
+    - Sponsorblock
+        - "Point or highlight" and "Off-topic" -> do nothing 
+        - Others should skip without notification
+
+S0und
+- Login as myself
+- Settings
+    - General
+        - Show/Hide rows on Main screen -> Followed, Followed Channels
+        - Accent colour -> "Familiar shade of purple"
+    - Stream Settings
+        - Remote shortcuts -> disable all of them
+
+
+Amazon Prime Video
+- Login as myself
+
+JellyFin
+- Server address = same as web address used to get to Server
+- Login as myself
+- Settings
+    - Playback
+        - Disable queue all subsequent episodes
+        - Disable cinema mode
+        - Preferred media player -> External app (Mpv)
+
+mpv
+- Settings -> Advanced -> Edit mpv.conf
+    - slang=eng
+    - alang=jpn,eng
+    - audio-channels=stereo
+    - channels=2
