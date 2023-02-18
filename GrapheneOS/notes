@@ -1,0 +1,25 @@
+Browser
+- Fennec because ublock Origin
+
+Camera
+- Install Google Camera from Play Store
+- Hold shutter = start capturing video
+- Normal Mode
+    - Night Sight Auto
+    - Enable RAW option
+    - Top Shot Auto
+    - Full image
+    - Save location
+    - Volume buttons are shutter
+        - Combined with double tap power to open camera = super fast access to taking photos/videos
+        - Can hold as well to immediately start taking video
+- Video
+    - 4K 60
+- Night Sight
+    - Only use for astrophotography
+
+Location
+- Sandboxed Google Play
+    - Reroute location requests to the OS = on (enabled by default)
+    - Google Location Accuracy = on (disabled by default)
+- GmsCompat needs access to location all the time
