@@ -13,6 +13,9 @@ Install
 - Smart Tube Next + Custom Launcher
 - Button Mapper
 
+Custom launchers can be made with 
+https://atvlauncher.trekgonewild.de/index.php
+
 Settings
 - Display and Sound
     - Disable Hdmi CEC
